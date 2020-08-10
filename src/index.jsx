@@ -5,7 +5,7 @@ import { ConnectedRouter } from 'connected-react-router/immutable';
 
 import store, { history } from './store';
 import * as serviceWorker from './serviceWorker';
-import App from './containers/App';
+import App from './pages';
 import { APP_ENV } from './config/constants';
 import './styles/main.scss';
 

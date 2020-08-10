@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { __DEBUG__ } from 'src/config/constants';
-import Home from 'src/containers/Home';
-import NotFound from 'src/containers/NotFound';
+import Home from 'src/pages/Home';
+import NotFound from 'src/pages/NotFound';
 import Debug from 'src/components/Debug';
 
 const App = () => {
