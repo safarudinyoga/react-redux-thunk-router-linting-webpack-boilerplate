@@ -46,8 +46,8 @@ $normal-down: 'screen and (max-width: #{$screen-lg-max})';
 
 // Primary fonts will be used for 90% of the text styles, mainly body text.
 // Secondary fonts will be used mainly for headings.
-$font--primary: 'Roboto', Helvetica, Arial, sans-serif;
-$font--secondary: 'Helvetica', Arial, sans-serif;
+$font--primary: 'Roboto';
+// $font--secondary: 'Helvetica', Arial, sans-serif;
 
 // MOBILE: Font sizes (in pixels) / line-heights
 $font-size--h1: 30;
@@ -65,7 +65,13 @@ $line-height--h4: 1.8rem;
 $font-size--button: 14;
 $line-height--button: 1.8rem;
 
-$font-size--body: 16;
+$font-size--table: 10;
+
+$font-size--title: 16;
+
+$font-size--sub-title: 10;
+
+$font-size--body: 12;
 $line-height--body: 2.8rem;
 
 $font-size--body--small: 14;
@@ -91,7 +97,13 @@ $desktop--line-height--h4: 2rem;
 $desktop--font-size--button: 16;
 $desktop--line-height--button: 2rem;
 
-$desktop--font-size--body: 20;
+$desktop--font-size--table: 10;
+
+$desktop--font-size--title: 16;
+
+$desktop--font-size--sub-title: 10;
+
+$desktop--font-size--body: 12;
 $desktop--line-height--body: 3.6rem;
 
 $desktop--font-size--body--small: 16;
@@ -100,19 +112,28 @@ $desktop--line-height--body--small: 2.4rem;
 $desktop--font-size--body--large: 24;
 $desktop--line-height--body--large: 3.8rem;
 
+// Font Weight
+$light: 300;
+$regular: 400;
+$bold: 700;
+
 // -----------------------------------------------------------------------------
 //
 // Colors
 //
 // -----------------------------------------------------------------------------
-$color--primary: #FF0000;
-$color--primary--lighter: #FF7777;
-$color--primary--darker: #9C0000;
+$color--primary: #644AAA;
+$color--primary--light: #8C67F0;
+$color--primary--lighter: #8260DF;
+$color--primary--darker: #7557C7;
 
-$color--black: #000;
+$color--black: #1A1A1A;
 $color--white: #fff;
-$color--grey: #AAAAAA;
-$color--grey--lighter: #EFEFEF;
+$color--red: #FF3B5C;
+$color--tosca: #54E7D2;
+
+$color--grey: #CECECE;
+$color--grey--lighter: #0000001A;
 $color--grey--darker: #7A7A7A;
 
 $color--transparent: rgba(255, 255, 255, 0);
@@ -125,15 +146,18 @@ $color--error: #da3636;
 //
 // -----------------------------------------------------------------------------
 $color--border: $color--grey--lighter;
-$border-radius--primary: 3px;
+$border-radius--primary: 12px;
+$border-radius--secondary: 8px;
+$border-radius--rare: 4px;
 
 // -----------------------------------------------------------------------------
 //
 // Shadows
 //
 // -----------------------------------------------------------------------------
-$box-shadow--primary: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-$box-shadow--secondary: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+$box-shadow--primary: 0 3px 6px 0 #0000001A;
+$box-shadow--secondary: 0 4px 10px 0 #E5E5E5BD;
+$box-shadow--third: 0 1px 8px 0 #00000021;
 
 // -----------------------------------------------------------------------------
 //

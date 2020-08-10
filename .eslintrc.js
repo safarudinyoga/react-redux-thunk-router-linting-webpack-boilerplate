@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['react-app', 'airbnb'],
+  extends: ['react-app', 'airbnb', 'prettier'],
   parser: 'babel-eslint',
   plugins: [
     'babel',
@@ -8,8 +8,9 @@ module.exports = {
     'import',
   ],
   env: {
-    browser: true,
-    es6: true
+    node: true,
+    es6: true,
+    browser: true
   },
   settings: {
     'import/resolver': {
@@ -19,6 +20,10 @@ module.exports = {
     }
   },
   rules: {
+    "import/no-unresolved": [
+      2,
+      { "caseSensitive": false }
+    ],
     // Ensure no unused prop types.
     'react/no-unused-prop-types': 'warn',
 
