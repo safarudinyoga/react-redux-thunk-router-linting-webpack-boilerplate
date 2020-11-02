@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['react-app', 'airbnb', 'prettier'],
+  extends: ['react-app', 'airbnb', 'prettier', 'plugin:react-hooks/recommended'],
   parser: 'babel-eslint',
   plugins: [
     'babel',
@@ -20,6 +20,12 @@ module.exports = {
     }
   },
   rules: {
+    'react/jsx-first-prop-new-line': [1, 'multiline'],
+    'react/jsx-max-props-per-line': [1,
+        {
+            'maximum': 1
+        }
+    ],
     "import/no-unresolved": [
       2,
       { "caseSensitive": false }
@@ -56,7 +62,7 @@ module.exports = {
     'react/boolean-prop-naming': 'off',
 
     // Enforce consistent usage of destructuring assignment of props, state, and context.
-    'react/destructuring-assignment': ['warn', 'always', { ignoreClassFields: true }],
+    'react/destructuring-assignment': ['error', 'always', { 'ignoreClassFields': true }],
 
     // Prevent using this.state within a this.setState.
     'react/no-access-state-in-setstate': 'warn',
@@ -108,10 +114,10 @@ module.exports = {
     'import/first': 'off',
 
     // Limiting the maximum of props on a single line (default: 1).
-    'react/jsx-max-props-per-line': 1,
+    // 'react/jsx-max-props-per-line': 1,
 
     // Ensure correct position of the first property.
-    'react/jsx-first-prop-new-line': 'warn',
+    // 'react/jsx-first-prop-new-line': 'warn',
 
     // Enforce spacing around jsx equals signs.
     'react/jsx-equals-spacing': 'warn',
@@ -120,7 +126,11 @@ module.exports = {
     'react/jsx-indent': 'warn',
 
     // Validate closing bracket location in JSX.
-    'react/jsx-closing-bracket-location': 'off',
+    // '@studysync/eslint-plugin-persnickety': {},
+    // 'react/jsx-closing-bracket-location': 'off',
+    // 'react/jsx-closing-bracket-location': 1,
+    // 'react/jsx-closing-bracket-location': [1, 'tag-aligned'],
+    'react/jsx-closing-bracket-location': [1, 'line-aligned'],
 
     // Disallow mutable export variables.
     'import/no-mutable-exports': 'error',
@@ -132,7 +142,10 @@ module.exports = {
     'object-shorthand': ['off', 'never'],
 
     // Require each propery in object to go on a newline.
-    'object-curly-newline': 'off',
+    // 'object-curly-newline': 'off',
+    // "object-curly-newline": ["error", {
+    //   "minProperties": 2
+    // }],
 
     // Require the use of parenthesis instead of curly braces when the only line
     // in an arrow function is a return statement.
@@ -402,7 +415,7 @@ module.exports = {
     'no-label-var': 'error',
 
     // Disallow declaration of variables already declared in the outer scope.
-    'no-shadow': 'warn',
+    'no-shadow': 'off',
 
     // Disallow shadowing of names such as arguments.
     'no-shadow-restricted-names': 'error',
@@ -493,7 +506,7 @@ module.exports = {
     'no-multiple-empty-lines': ['warn', { max: 2 }],
 
     // Disallow nested ternary expressions.
-    'no-nested-ternary': 'warn',
+    'no-nested-ternary': 'off',
 
     // Disallow use of the Object constructor.
     'no-new-object': 'off',
@@ -662,10 +675,20 @@ module.exports = {
     'react/self-closing-comp': 'warn',
 
     // Prevent missing parentheses around multilines JSX.
-    'react/jsx-wrap-multilines': 'warn',
+    // 'react/jsx-wrap-multilines': 'warn',
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "parens-new-line",
+      "logical": "parens-new-line",
+      "prop": "parens-new-line"
+      }
+    ],
 
     // Prevent that an element uses an Array index in its key property.
-    'react/no-array-index-key': 'error',
+    'react/no-array-index-key': 'off',
 
     // Prevent invalid characters from appearing in markup
     'react/no-unescaped-entities': 'warn',
@@ -732,7 +755,7 @@ module.exports = {
     'jsx-a11y/anchor-has-content': 'off',
 
     // Enforce that a label tag has a text label and an associated control.
-    'jsx-a11y/label-has-associated-control': 'warn',
+    'jsx-a11y/label-has-associated-control': 'off',
 
     // Require that mouseover/out come with focus/blur, for keyboard-only users.
     'jsx-a11y/mouse-events-have-key-events': 'off',

@@ -26,7 +26,7 @@ render();
 
 // Enable Webpack hot module replacement for components.
 if (module.hot) {
-  module.hot.accept('src/containers/App', () => {
+  module.hot.accept('src/pages', () => {
     render();
   });
 }
